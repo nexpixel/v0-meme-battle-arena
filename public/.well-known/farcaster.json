@@ -1,0 +1,34 @@
+{
+  "accountAssociation": {
+    "header": "eyJmaWQiOjkxNTIsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHgwMmVmNzkwRGQ3OTkzQTM1ZkQ4NDdDMDUzRURkQUU5NDBEMDU1NTk2In0",
+    "payload": "eyJkb21haW4iOiJtZW1lLWJhdHRsZS1hcmVuYS52ZXJjZWwuYXBwIn0",
+    "signature": "MHgxMGQwZGU4ZGYwZDUwZTdmMGIxN2YxMTU2NDI1MjRmZTY0MTUyZGU4ZGU1MWU0MThiYjU4ZjVmZmQxYjRjNDBiNGVlZTRhNDcwNmVmNjhlMzQ0ZGQ5MDBkYmQyMmNlMmVlZGY5ZGQ0N2JlNWRmNzMwYzUxNjE4OWVjZDJjY2Y0MDFj"
+  },
+  "baseBuilder": {
+    "allowedAddresses": ["0x..."]
+  },
+  "frame": {
+    "version": "1",
+    "name": "Meme Battle Arena",
+    "homeUrl": "https://meme-battle-arena.vercel.app",
+    "iconUrl": "https://meme-battle-arena.vercel.app/icon.png",
+    "splashImageUrl": "https://meme-battle-arena.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "webhookUrl": "https://meme-battle-arena.vercel.app/api/webhook",
+    "subtitle": "Battle memes, win glory",
+    "description": "A cyberpunk-themed meme battle arena where the best memes compete in real-time voting battles.",
+    "screenshotUrls": [
+      "https://meme-battle-arena.vercel.app/screenshot1.png",
+      "https://meme-battle-arena.vercel.app/screenshot2.png",
+      "https://meme-battle-arena.vercel.app/screenshot3.png"
+    ],
+    "primaryCategory": "social",
+    "tags": ["memes", "battles", "voting", "social", "entertainment"],
+    "heroImageUrl": "https://meme-battle-arena.vercel.app/hero.png",
+    "tagline": "Battle instantly",
+    "ogTitle": "Meme Battle Arena",
+    "ogDescription": "Battle memes in real-time voting competitions",
+    "ogImageUrl": "https://meme-battle-arena.vercel.app/og.png",
+    "noindex": false
+  }
+}

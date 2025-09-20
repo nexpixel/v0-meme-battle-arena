@@ -1,0 +1,213 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated to cyberpunk theme with enhanced colors */
+  --background: #0a0a0a;
+  --foreground: #00ff41;
+  --card: #1a1a1a;
+  --card-foreground: #00ff41;
+  --popover: #1a1a1a;
+  --popover-foreground: #00ff41;
+  --primary: #00ff41;
+  --primary-foreground: #0a0a0a;
+  --secondary: #ff0080;
+  --secondary-foreground: #0a0a0a;
+  --muted: #333333;
+  --muted-foreground: #888888;
+  --accent: #00ffff;
+  --accent-foreground: #0a0a0a;
+  --destructive: #ff0040;
+  --destructive-foreground: #ffffff;
+  --border: #333333;
+  --input: #1a1a1a;
+  --ring: #00ff41;
+  --chart-1: #00ff41;
+  --chart-2: #ff0080;
+  --chart-3: #00ffff;
+  --chart-4: #ffff00;
+  --chart-5: #ff4000;
+  --radius: 0.25rem;
+  --sidebar: #1a1a1a;
+  --sidebar-foreground: #00ff41;
+  --sidebar-primary: #00ff41;
+  --sidebar-primary-foreground: #0a0a0a;
+  --sidebar-accent: #ff0080;
+  --sidebar-accent-foreground: #0a0a0a;
+  --sidebar-border: #333333;
+  --sidebar-ring: #00ff41;
+}
+
+.dark {
+  /* Dark mode uses same cyberpunk colors */
+  --background: #0a0a0a;
+  --foreground: #00ff41;
+  --card: #1a1a1a;
+  --card-foreground: #00ff41;
+  --popover: #1a1a1a;
+  --popover-foreground: #00ff41;
+  --primary: #00ff41;
+  --primary-foreground: #0a0a0a;
+  --secondary: #ff0080;
+  --secondary-foreground: #0a0a0a;
+  --muted: #333333;
+  --muted-foreground: #888888;
+  --accent: #00ffff;
+  --accent-foreground: #0a0a0a;
+  --destructive: #ff0040;
+  --destructive-foreground: #ffffff;
+  --border: #333333;
+  --input: #1a1a1a;
+  --ring: #00ff41;
+  --chart-1: #00ff41;
+  --chart-2: #ff0080;
+  --chart-3: #00ffff;
+  --chart-4: #ffff00;
+  --chart-5: #ff4000;
+  --sidebar: #1a1a1a;
+  --sidebar-foreground: #00ff41;
+  --sidebar-primary: #00ff41;
+  --sidebar-primary-foreground: #0a0a0a;
+  --sidebar-accent: #ff0080;
+  --sidebar-accent-foreground: #0a0a0a;
+  --sidebar-border: #333333;
+  --sidebar-ring: #00ff41;
+}
+
+@theme inline {
+  /* Updated to use monospace font */
+  --font-sans: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-mono;
+    /* Added cyberpunk grid background */
+    background-image: linear-gradient(rgba(0, 255, 65, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 65, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-attachment: fixed;
+  }
+}
+
+/* Enhanced cyberpunk glow effects */
+@layer utilities {
+  .glow-primary {
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.3), 0 0 30px rgba(0, 255, 65, 0.2);
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  .glow-secondary {
+    box-shadow: 0 0 15px rgba(255, 0, 128, 0.3), 0 0 30px rgba(255, 0, 128, 0.2);
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3), 0 0 30px rgba(0, 255, 255, 0.2);
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  .neon-border-primary {
+    border: 1px solid #00ff41;
+    box-shadow: 0 0 8px rgba(0, 255, 65, 0.3), inset 0 0 8px rgba(0, 255, 65, 0.1), 0 0 15px rgba(0, 255, 65, 0.2);
+  }
+
+  .neon-border-secondary {
+    border: 1px solid #ff0080;
+    box-shadow: 0 0 8px rgba(255, 0, 128, 0.3), inset 0 0 8px rgba(255, 0, 128, 0.1), 0 0 15px rgba(255, 0, 128, 0.2);
+  }
+
+  .neon-border-accent {
+    border: 1px solid #00ffff;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.3), inset 0 0 8px rgba(0, 255, 255, 0.1), 0 0 15px rgba(0, 255, 255, 0.2);
+  }
+
+  .cyber-gradient {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+  }
+
+  .cyber-text {
+    text-shadow: 0 0 10px currentColor;
+  }
+
+  .scanlines {
+    position: relative;
+  }
+
+  .scanlines::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(transparent 50%, rgba(0, 255, 65, 0.03) 50%);
+    background-size: 100% 4px;
+    pointer-events: none;
+  }
+
+  @keyframes pulse-glow {
+    0% {
+      box-shadow: 0 0 15px rgba(0, 255, 65, 0.3), 0 0 30px rgba(0, 255, 65, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 20px rgba(0, 255, 65, 0.5), 0 0 40px rgba(0, 255, 65, 0.3);
+    }
+  }
+
+  @keyframes flicker {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+
+  .flicker {
+    animation: flicker 0.15s infinite linear;
+  }
+}
